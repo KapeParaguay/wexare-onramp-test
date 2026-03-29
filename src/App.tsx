@@ -1,7 +1,7 @@
 import { PrivyProvider, usePrivy, useFundWallet } from "@privy-io/react-auth";
 import { polygon, polygonAmoy } from "@privy-io/chains";
 
-const PRIVY_APP_ID = "cmlby3izs040gjo0cgsa1wzoz";
+const PRIVY_APP_ID = import.meta.env.VITE_PRIVY_APP_ID as string;
 
 function FundButton() {
   const { ready, authenticated, login, user, logout } = usePrivy();
